@@ -306,7 +306,7 @@ void randomize()
     syslog(LOG_INFO, "size is %i", size);
     if (size < 5*1024*1024)
     {
-      fillData(5 * 1041*1024, buffer);
+      fillData(5 * 1024*1024, buffer);
       syslog(LOG_INFO, "size is less than 5 mb");
     }
     else
