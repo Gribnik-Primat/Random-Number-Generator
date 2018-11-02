@@ -260,13 +260,13 @@ void fillData(int size, FILE *buffer)
 {
   syslog(LOG_INFO, "fillData()"); 
   struct sysinfo sys_info;
-  sysinfo(&sys_info);
+  time_t rawtime;
   int k = 0, num = 0;
   ub4 j;
   while (sizeOfFile(buffer) < size)
   {
     rndgnt();
-    time_t rawtime;
+    sysinfo(&sys_info);
     for(j = 0; j < 256; ++j)
     {
 	time(&rawtime);
